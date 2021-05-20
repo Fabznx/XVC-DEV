@@ -185,8 +185,8 @@ ul {
     padding: 20px;
     background: #3F396B;
     color: #FFFFFF;
-    margin-top: -300px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    padding-right: -10px;
     text-transform: uppercase;
 }
 
@@ -215,14 +215,15 @@ ul {
 
 /*Sidebar*/
 
-aside#sidebar {
+aside#sidebar-about {
+    display: flex;
+    flex: 1;
     float: right;
-    width: 30%;
-    margin-top: 10px;
+    margin-top: -320px;
 }
 
-aside#sidebar .help input,
-aside#sidebar .help textarea {
+aside#sidebar-about .help input,
+aside#sidebar-about .help textarea {
     width: 90%;
     padding: 10px;
 }
@@ -359,8 +360,8 @@ footer {
     #subrequest h1,
     #subrequest form,
     #icons .box,
-    aside#sidebar,
-    aside#sidebar .submit_button {
+    aside#sidebar-about,
+    aside#sidebar-about .submit_button {
         float: none;
         text-align: center;
         width: 100%;
