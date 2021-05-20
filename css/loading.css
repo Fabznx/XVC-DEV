@@ -1,0 +1,95 @@
+body {
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #191919;
+}
+
+body h1 {
+    color: white;
+    text-align: center;
+}
+
+body p {
+    color: white;
+    text-align: center;
+    font-size: 180%;
+}
+
+
+/*Type-Writer*/
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 10em;
+    margin: 0 auto;
+    border-right: 1.5px solid rgba(255, 255, 255, 0.75);
+    font-size: 250%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(200%);
+    color: white;
+}
+
+
+/*Anim*/
+
+.anim-typewriter {
+    animation: typewriter 3s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    tp {
+        width: 16em;
+    }
+}
+
+@keyframes blinkCursorText {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    tp {
+        border-right-color: transparent;
+    }
+}
+
+
+/*Circle*/
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 16px solid #333;
+    border-top: 16px solid #F7D14F;
+    animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+/*Footer*/
+
+footer {
+    color: #F7D14F;
+    text-align: center;
+    border-top: #F7D14F 5px solid;
+}

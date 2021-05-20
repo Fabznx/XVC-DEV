@@ -52,9 +52,17 @@ ul {
 
 #icons .box {
     float: left;
-    text-align: center;
     width: 30%;
-    padding: 10px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+#icons .box:hover {
+    border: none;
+    transition: .2s;
+    transform: scale(1.15);
+    color: black;
 }
 
 
@@ -151,7 +159,7 @@ header a:hover {
 }
 
 #showcase:hover {
-    transition: filter .10s ease-in-out;
+    transition: -webkit-filter.10s ease-in-out;
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%)
 }
@@ -174,6 +182,10 @@ header a:hover {
     color: #FFFFFF;
     background: #3F396B;
     flex-direction: column;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 #subrequest h1 {
