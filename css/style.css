@@ -15,6 +15,12 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
+}
+
+.container-shop {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
 }
@@ -179,8 +185,8 @@ ul {
     padding: 20px;
     background: #3F396B;
     color: #FFFFFF;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: -300px;
+    margin-bottom: 50px;
     text-transform: uppercase;
 }
 
