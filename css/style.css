@@ -15,11 +15,152 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*Services List*/
+
+*ul#services li {
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 20px;
+    background: #e6e6e6;
+}
+
+
+/*Pricing Tables*/
+
+.pricing-table {
+    background: white;
+    flex: 1;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.pricing-header {
+    color: #fff;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.price span {
+    font-size: 30px;
+}
+
+.title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 80%;
+    max-width: 360px;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.pricing-list {
+    padding: 10px 20px;
+}
+
+.pricing-list li {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #344;
+    text-align: center;
+}
+
+.border {
+    width: 80px;
+    height: 1px;
+    background: #ddd;
+    margin: auto;
+}
+
+.pricing-table a {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+    border: 1px solid;
+    max-width: 360px;
+    transition: .2s linear;
+}
+
+.pricing-table a:hover {
+    transform: scale(1.2);
+    border-radius: 30px;
+}
+
+.table1 .pricing-header {
+    background: #3498db;
+}
+
+.table2 .pricing-header {
+    background: #f39c12;
+}
+
+.table3 .pricing-header {
+    background: #8e44ad;
+}
+
+.table1 .title {
+    background-image: linear-gradient(125deg, #3498db, #3F396B);
+}
+
+.table2 .title {
+    background-image: linear-gradient(125deg, #f39c12, #e74c3c);
+}
+
+.table3 .title {
+    background-image: linear-gradient(125deg, #8e44ad, #5758BB);
+}
+
+.table1 a {
+    color: #3498db;
+}
+
+.table2 a {
+    color: #f39c12;
+}
+
+.table3 a {
+    color: #8e44ad;
+}
+
+.table1 a:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+.table2 a:hover {
+    background: #f39c12;
+    color: #fff;
+}
+
+.table3 a:hover {
+    background: #8e44ad;
+    color: #fff;
 }
 
 ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .submit_button {
@@ -78,25 +219,6 @@ aside#sidebar .help input,
 aside#sidebar .help textarea {
     width: 90%;
     padding: 10px;
-}
-
-
-/*Main-col*/
-
-article#main-col {
-    float: left;
-    width: 65%;
-}
-
-
-/*Services List*/
-
-ul#services li {
-    list-style: none;
-    padding: 20px;
-    border: #cccccc solid 1px;
-    margin-bottom: 20px;
-    background: #e6e6e6;
 }
 
 
@@ -225,13 +347,12 @@ footer {
 
 /*I-PAD*/
 
-@media(max-width: 768px) {
+@media screen and (max-width: 768px) {
     header #branding header nav,
     header nav li,
     #subrequest h1,
     #subrequest form,
     #icons .box,
-    article#main-col,
     aside#sidebar,
     aside#sidebar .submit_button {
         float: none;
@@ -254,5 +375,8 @@ footer {
     .help textarea {
         width: 100%;
         margin-bottom: 5px;
+    }
+    .pricing-table {
+        flex: 100%;
     }
 }
