@@ -26,8 +26,8 @@ ul {
     height: 36px;
     background: #F7D14F;
     border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     color: #FFFFFF;
 }
 
@@ -151,7 +151,7 @@ header a:hover {
 }
 
 #showcase:hover {
-    transition: filter .5s ease-in-out;
+    transition: filter .10s ease-in-out;
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%)
 }
@@ -182,7 +182,7 @@ header a:hover {
 
 #subrequest form {
     float: right;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 #subrequest input[type="email"] {
@@ -220,7 +220,8 @@ footer {
     #subrequest form,
     #icons .box,
     article#main-col,
-    aside#sidebar {
+    aside#sidebar,
+    aside#sidebar .submit_button {
         float: none;
         text-align: center;
         width: 100%;
