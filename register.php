@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>XVC-DEV | Register</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="icon" href="./img/favicon.ico">
+    <script src="https://kit.fontawesome.com/0684f9cef2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="box">
+        <form id="logForm" action="home.php" method="get">
+            <h1>Register</h1>
+            <input type="email" name="" placeholder="Email" required id="email">
+            <input type="password" name="" placeholder="Password" required id="password">
+            <button onclick="signUp()" id="signUp">Register</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>XVC-DEV - Copyright &copy; 2021</p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -28,11 +28,11 @@
             <nav class=>
                 <ul>
                     <!--List Items-->
-                    <li class="current"><a href="home.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li class="current"><a href="home.php">Home</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="about.php">About</a></li>
                     <li>
-                        <button type="submit"><a href="login.html">Logout <i class="fas fa-sign-out-alt"></i></a></button>
+                        <button type="submit"><a href="login.php">Logout <i class="fas fa-sign-out-alt"></i></a></button>
                     </li>
                 </ul>
             </nav>

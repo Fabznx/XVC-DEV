@@ -27,11 +27,11 @@
             <nav>
                 <ul>
                     <!--List Items-->
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li class="current"><a href="about.html">About</a></li>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li class="current"><a href="about.php">About</a></li>
                     <li>
-                        <a href="login.html">Logout <i class="fas fa-sign-out-alt"></i></a>
+                        <a href="login.php">Logout <i class="fas fa-sign-out-alt"></i></a>
                     </li>
                 </ul>
             </nav>
