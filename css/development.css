@@ -1,0 +1,32 @@
+body {
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #191919;
+}
+
+.information {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.information h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    float: center;
+}
+
+
+/*Footer*/
+
+footer {
+    color: #F7D14F;
+    text-align: center;
+    border-top: #F7D14F 5px solid;
+}
