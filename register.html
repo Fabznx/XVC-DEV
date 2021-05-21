@@ -2,12 +2,15 @@
 <html lang="en">
 
 <head>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>XVC-DEV | Register</title>
     <link rel="stylesheet" href="./css/login.css">
-    <script src="https://kit.fontawesome.com/0684f9cef2.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./img/favicon.ico">
+    <script src="https://kit.fontawesome.com/0684f9cef2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -16,16 +19,13 @@
             <h1>Register</h1>
             <input type="email" name="" placeholder="Email" required id="email">
             <input type="password" name="" placeholder="Password" required id="password">
-            <button type="submit">Submit</button>
+            <button onclick="signUp()" id="signUp">Register</button>
         </form>
     </div>
 
     <footer>
         <p>XVC-DEV - Copyright &copy; 2021</p>
     </footer>
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
-    <script src="backend/accountHandling.js"></script>
 
 
 </body>

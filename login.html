@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>XVC-DEV | Login</title>
@@ -12,11 +15,34 @@
 
 <body>
     <div class="box">
-        <form id="logForm" action="home.html" method="get">
+        <form id="logForm" action="login.html" method="get">
             <h1>Login</h1>
-            <input type="email" name="" placeholder="Email" required id="email-sub">
-            <input type="password" name="" placeholder="Password" required id="password-sub">
-            <button type="submit">Submit</button>
+            <input type="email" name="" placeholder="Email" required id="email">
+            <input type="password" name="" placeholder="Password" required id="password">
+            <button onclick="signUserIn()">Sign In</button>
+            <script>
+                // Your web app's Firebase configuration
+                var firebaseConfig = {
+                    apiKey: "AIzaSyA2N0fw3ht9O-Ji-jYfE2Zx3ldf7J4Rxfo",
+                    authDomain: "xvc-dev-4c108.firebaseapp.com",
+                    databaseURL: "https://xvc-dev-4c108-default-rtdb.europe-west1.firebasedatabase.app",
+                    projectId: "xvc-dev-4c108",
+                    storageBucket: "xvc-dev-4c108.appspot.com",
+                    messagingSenderId: "40660892084",
+                    appId: "1:40660892084:web:64e182316a93ed67531ae1"
+                };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+
+                const auth = firebase.auth();
+                //signIN function
+                function signUserIn() {
+                    var email = document.getElementById("email");
+                    var password = document.getElementById("password");
+                    const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+                    promise.catch(e => alert(e.message));
+                }
+            </script>
             <h4>If you do not have an account yet, register here <a href="register.html">Register</a></h4>
         </form>
     </div>
@@ -25,8 +51,6 @@
     <footer>
         <p>XVC-DEV - Copyright &copy; 2021</p>
     </footer>
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
-    <script src="backend/accountHandling.js"></script>
 </body>
 
 </html>
