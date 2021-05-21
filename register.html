@@ -7,27 +7,27 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>XVC-DEV | Login</title>
+    <title>XVC-DEV | Register</title>
     <link rel="stylesheet" href="./css/login.css">
-    <script src="https://kit.fontawesome.com/0684f9cef2.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./img/favicon.ico">
+    <script src="https://kit.fontawesome.com/0684f9cef2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="box">
-        <form id="logForm" action="login.php" method="get">
-            <h1>Login</h1>
+        <form id="logForm" action="home.html" method="get">
+            <h1>Register</h1>
             <input type="email" name="" placeholder="Email" required id="email">
             <input type="password" name="" placeholder="Password" required id="password">
-            <button onclick="">Sign In</button>
-            <h4>If you do not have an account yet, register here <a href="register.php">Register</a></h4>
+            <button onclick="signUp()" id="signUp">Register</button>
         </form>
     </div>
-
 
     <footer>
         <p>XVC-DEV - Copyright &copy; 2021</p>
     </footer>
+
+
 </body>
 
 </html>
