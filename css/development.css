@@ -1,3 +1,7 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
 body {
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     padding: 0;
@@ -5,11 +9,46 @@ body {
     background: #191919;
 }
 
-.information {
-    width: 300px;
-    padding: 40px;
+.page {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    height: 100vh;
+    position: relative;
+}
+
+.time {
+    color: white;
+    text-transform: uppercase;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.middle {
     position: absolute;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 180%;
+}
+
+.time span {
+    padding: 0 14px;
+}
+
+time span div {
+    font-size: 80px;
+}
+
+.information {
+    position: absolute;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -22,10 +61,16 @@ body {
     float: center;
 }
 
+@media screen and (max-width: 900px) {
+    .col {
+        flex: 100%;
+    }
+}
 
-/*Footer*/
 
-footer {
+/*Header*/
+
+header {
     color: #F7D14F;
     text-align: center;
     border-top: #F7D14F 5px solid;
