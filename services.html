@@ -49,6 +49,8 @@
                 <ul class="pricing-list">
                     <li>Professional FX & Editing</li>
                     <div class="border"></div>
+                    <li>Sony Vegas Pro</li>
+                    <div class="border"></div>
                     <li><strong>24h </strong>Support</li>
                 </ul>
                 <a href="#">Order Now</a>
@@ -56,11 +58,13 @@
 
             <div class="pricing-table table2">
                 <div class="pricing-header">
-                    <div class="price"><span>$</span>10-30</div>
+                    <div class="price"><span>$</span>10 - 20</div>
                     <div class="title">Advertisement Clips</div>
                 </div>
                 <ul class="pricing-list">
                     <li>Professional Animations</li>
+                    <div class="border"></div>
+                    <li>Animated in Sony Vegas Pro</li>
                     <div class="border"></div>
                     <li><strong>24h </strong>Support</li>
                 </ul>
@@ -69,7 +73,7 @@
 
             <div class="pricing-table table3">
                 <div class="pricing-header">
-                    <div class="price"><span>$</span>50-100</div>
+                    <div class="price"><span>$</span>50 - 100</div>
                     <div class="title">Website Development</div>
                 </div>
                 <ul class="pricing-list">
@@ -85,28 +89,23 @@
             <aside id="sidebar">
                 <div class="box_right">
                     <h3>Request help</h3>
-                    <form class="help">
+                    <form class="help" action="services.html" method="post">
                         <div>
                             <label>Name</label><br>
-                            <input type="text" placeholder="Name" id="name">
+                            <input type="text" placeholder="Name" id="name" required>
                             <p></p>
                         </div>
                         <div>
                             <label>Email</label><br>
-                            <input type="text" placeholder="Email-Adress" id="email">
+                            <input type="text" placeholder="Email-Adress" id="email" required>
                             <p></p>
                         </div>
                         <div>
                             <label>Message</label><br>
-                            <textarea placeholder="Type your Message here.." id="textarea"></textarea>
+                            <textarea placeholder="Type your Message here.." id="textarea" required></textarea>
                             <p></p>
                         </div>
-                        <button class="submit_button" type="button" id="sub_button" onclick="change()" value="Submit">Submit</button>
-                        <script>
-                            function change() {
-                                document.getElementById("sub_button").innerHTML = "Submitted";
-                            }
-                        </script>
+                        <button class="submit_button" type="submit">Submit</button>
                     </form>
                 </div>
             </aside>
