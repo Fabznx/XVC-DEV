@@ -32,6 +32,7 @@
     }
     
     .box input[type="text"],
+    .box input[type="email"],
     .box input[type="password"] {
         border: 0;
         background: none;
@@ -47,18 +48,14 @@
         transition: 0.25s;
     }
     
-    .box input[type="text"]:hover,
-    .box input[type="password"]:hover {
-        transform: scale(1.1);
-    }
-    
     .box input[type="text"]:focus,
+    .box input[type="email"]:focus,
     .box input[type="password"]:focus {
-        width: 280px;
-        border-color: #F7D14F;
+        width: 220px;
+        border-color: #5848cf;
     }
     
-    .box input[type="submit"] {
+    .box button {
         border: 0;
         background: none;
         display: block;
@@ -73,7 +70,7 @@
         cursor: pointer;
     }
     
-    .box input[type="submit"]:hover {
+    .box button:hover {
         background: #2ecc71;
     }
     /*Footer*/

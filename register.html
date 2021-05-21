@@ -11,16 +11,23 @@
 </head>
 
 <body>
-    <form class="box" action="home.html" method="get">
-        <h1>REGISTER</h1>
-        <input type="text" name="" placeholder="Username" required>
-        <input type="password" name="" placeholder="Password" required>
-        <input type="submit" name="" value="Register">
-    </form>
+    <div class="box">
+        <form id="logForm" action="home.html" method="get">
+            <h1>Register</h1>
+            <input type="email" name="" placeholder="Email" required id="email">
+            <input type="password" name="" placeholder="Password" required id="password">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
     <footer>
         <p>XVC-DEV - Copyright &copy; 2021</p>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="backend/accountHandling.js"></script>
+
+
 </body>
 
 </html>
