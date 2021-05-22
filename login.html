@@ -4,6 +4,7 @@
 <head>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="accHandler.js"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -15,13 +16,14 @@
 
 <body>
     <div class="box">
-        <form id="logForm" action="login.html" method="get">
+        <div id="formContainer">
             <h1>Login</h1>
             <input type="email" name="" placeholder="Email" required id="email">
             <input type="password" name="" placeholder="Password" required id="password">
-            <button onclick="">Sign In</button>
-            <h4>If you do not have an account yet, register here <a href="register.html">Register</a></h4>
-        </form>
+            <button type="submit" onclick="SignInAccount()">Sign In</button>
+            <h4>If you do not have an account yet,<br>register <a href="register.html">here</a></h4>
+            <h4>If you forgot your password click <a href="resetPassword.html">here</a></h4>
+        </div>
     </div>
 
 
