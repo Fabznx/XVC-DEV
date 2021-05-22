@@ -13,6 +13,16 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
+function isSignedIn() {
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+        // User is signed in.
+        window.location = "home.html";
+    } else {
+        // No user is signed in.
+    }
+}
 
 function SignUpAccount() {
 
@@ -32,20 +42,17 @@ function SignUpAccount() {
     });
 
     alert("Signed Up");
-    window.location = "home.html";
 }
 
 
 
 function SignInAccount() {
-
     var email = document.getElementById("email");
     var password = document.getElementById("password");
 
     const promise = auth.signInWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message));
-    window.location = "home.html";
-    alert("Logged In");
+    isSignedIn();
 }
 
 function signOut() {
@@ -61,6 +68,7 @@ function resetPassword() {
 
     auth.sendPasswordResetEmail(emailAddress).then(function() {
         // Email sent.
+        alert("Verification link has been send to " + emailAddress);
     }).catch(function(error) {
         // An error happened.
     });

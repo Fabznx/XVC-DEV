@@ -289,6 +289,14 @@ header button:hover {
     color: #FFFFFF;
 }
 
+#subrequest {
+    color: #FFFFFF;
+    font-size: 180%;
+    text-align: center;
+    background: #3F396B;
+    text-transform: uppercase;
+}
+
 
 /*Footer*/
 
@@ -316,7 +324,7 @@ footer {
 
 /*I-PAD*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1250px) {
     header #branding header nav,
     header nav li,
     #subrequest h1,

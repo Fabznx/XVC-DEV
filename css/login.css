@@ -56,7 +56,7 @@
     }
     
     .box button {
-        border: 0;
+        /*border: 0;*/
         background: none;
         display: block;
         margin: 20px auto;
