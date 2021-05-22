@@ -179,18 +179,6 @@ ul {
 }
 
 
-/*Right - Box*/
-
-.box_right {
-    padding: 20px;
-    background: #3F396B;
-    color: #FFFFFF;
-    margin-top: 10px;
-    padding-right: -10px;
-    text-transform: uppercase;
-}
-
-
 /*icons*/
 
 #icons {
@@ -210,22 +198,6 @@ ul {
     transition: .2s;
     transform: scale(1.15);
     color: black;
-}
-
-
-/*Sidebar*/
-
-aside#sidebar-about {
-    display: flex;
-    flex: 1;
-    float: right;
-    margin-top: -320px;
-}
-
-aside#sidebar-about .help input,
-aside#sidebar-about .help textarea {
-    width: 90%;
-    padding: 10px;
 }
 
 
@@ -318,39 +290,6 @@ header button:hover {
 }
 
 
-/*Submit-Request*/
-
-#subrequest {
-    padding: 30px;
-    color: #FFFFFF;
-    background: #3F396B;
-    flex-direction: column;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-#subrequest h1 {
-    float: left;
-}
-
-#subrequest form {
-    float: right;
-    margin-top: 20px;
-}
-
-#subrequest input[type="email"] {
-    padding: 4px;
-    height: 25px;
-    width: 250px;
-}
-
-textarea {
-    resize: none;
-}
-
-
 /*Footer*/
 
 footer {
@@ -360,6 +299,15 @@ footer {
     background-color: #3F396B;
     text-align: center;
     border-top: #F7D14F 5px solid;
+}
+
+
+/*About-Page*/
+
+.CommingSoon {
+    color: black;
+    font-size: 200%;
+    text-align: center;
 }
 
 
@@ -375,7 +323,8 @@ footer {
     #subrequest form,
     #icons .box,
     aside#sidebar-about,
-    aside#sidebar-about .submit_button {
+    aside#sidebar-about .submit_button,
+    .box_right {
         float: none;
         text-align: center;
         width: 100%;
@@ -398,6 +347,9 @@ footer {
         margin-bottom: 5px;
     }
     .pricing-table {
+        flex: 100%;
+    }
+    .box_right {
         flex: 100%;
     }
 }
