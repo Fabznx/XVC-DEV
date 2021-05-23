@@ -22,7 +22,6 @@ function isSignedIn() {
         window.location = "home.html";
     } else {
         // No user is signed in.
-        alert("No User signed in!");
     }
 }
 
@@ -39,9 +38,6 @@ function SignUpAccount() {
     user.sendEmailVerification().then(function() {
         console.log("email sent");
         // Email sent.
-        alert("Signed Up");
-        alert("To verify your account click on the link in the email that has been send to: " + email.value);
-        isSignedIn();
     }).catch(function(error) {
         // An error happened.
     });
