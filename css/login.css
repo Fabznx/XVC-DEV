@@ -93,12 +93,13 @@ footer {
     .box {
         text-align: center;
         width: 100%;
+        top: 50%;
     }
     .box h1,
     .box h4,
     .box a {
         width: 100%;
-        font-size: 30px;
+        font-size: 20px;
     }
     .box input[type="text"],
     .box input[type="email"],
