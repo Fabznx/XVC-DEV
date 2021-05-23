@@ -5,14 +5,14 @@ body {
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #FFFFFF;
+    background-color: white;
 }
 
 
 /*Global Design */
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
 }
@@ -277,9 +277,9 @@ header nav ul li ul {
     background: #27243f;
     border: solid 2px #fdc200;
     border-radius: 12px;
-    float: right;
+    float: center;
     padding: 10px;
-    width: 260px;
+    width: 10%;
 }
 
 header nav ul li:hover ul {
@@ -296,7 +296,7 @@ header nav ul li ul a {
 
 #showcase {
     min-height: 400px;
-    background: url('../img/showcase.jpg') no-repeat 0px -400px;
+    background: url('../img/showcase.jpg') 0px -400px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%)
 }
@@ -317,14 +317,6 @@ header nav ul li ul a {
     color: #FFFFFF;
 }
 
-#subrequest {
-    color: #FFFFFF;
-    font-size: 180%;
-    text-align: center;
-    background: #3F396B;
-    text-transform: uppercase;
-}
-
 
 /*Footer*/
 
@@ -337,13 +329,10 @@ footer {
     border-top: #F7D14F 5px solid;
 }
 
-
-/*About-Page*/
-
 .CommingSoon {
-    color: black;
-    font-size: 200%;
+    color: #e74c3c;
     text-align: center;
+    font-size: 50px;
 }
 
 
@@ -397,10 +386,17 @@ footer {
         border-radius: 12px;
         float: right;
         padding: 5px;
-        width: 220px;
+        width: auto;
     }
     header nav ul li:hover ul {
         transition: .10s;
         display: block;
+    }
+    .pic,
+    .pic img {
+        display: none;
+    }
+    .contact-btn {
+        width: auto;
     }
 }
