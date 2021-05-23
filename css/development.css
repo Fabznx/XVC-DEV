@@ -24,7 +24,7 @@ body {
 .time {
     color: white;
     text-transform: uppercase;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -35,7 +35,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 200%;
+    font-size: 180%;
 }
 
 .time span {
@@ -52,6 +52,7 @@ time span div {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 30%;
 }
 
 .information h1 {
@@ -59,40 +60,101 @@ time span div {
     text-transform: uppercase;
     font-weight: 500;
     float: center;
+    display: inline;
+    font-size: 180%;
 }
+
+
+/*Header*/
 
 header {
     color: #F7D14F;
     text-align: center;
     border-top: #F7D14F 5px solid;
+    width: 100%;
+    font-size: 30px;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 900px) {
     .col {
         flex: 100%;
-        max-width: 100%;
+    }
+    .middle {
+        font-size: 140%;
+    }
+    .information {
+        width: 100%;
+    }
+    .information h1 {
+        display: inline;
+        font-size: 140%;
+    }
+    header {
+        color: #F7D14F;
+        text-align: center;
+        border-top: #F7D14F 5px solid;
+        width: 100%;
     }
 }
 
-.middle {
-    font-size: 150%;
-    max-width: 100%;
+@media screen and (max-width: 500px) {
+    .col {
+        flex: 100%;
+    }
+    .middle {
+        font-size: 100%;
+    }
+    .information {
+        width: 100%;
+    }
+    .information h1 {
+        display: inline;
+        font-size: 90%;
+    }
 }
 
-.information {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    max-width: 100%;
+@media screen and (max-width: 400px) {
+    .col {
+        flex: 100%;
+    }
+    .middle {
+        font-size: 90%;
+    }
+    .information {
+        width: 100%;
+    }
+    .information h1 {
+        display: inline;
+        font-size: 90%;
+    }
+    header {
+        color: #F7D14F;
+        text-align: center;
+        border-top: #F7D14F 5px solid;
+        width: 100%;
+        font-size: 20px;
+    }
 }
 
-.information h1 {
-    color: white;
-    text-transform: uppercase;
-    font-weight: 500;
-    float: center;
-    font-size: 20px;
-    max-width: 100%;
+@media screen and (max-width: 280px) {
+    .col {
+        flex: 100%;
+    }
+    .middle {
+        font-size: 70%;
+    }
+    .information {
+        width: 100%;
+    }
+    .information h1 {
+        display: inline;
+        font-size: 90%;
+    }
+    header {
+        color: #F7D14F;
+        text-align: center;
+        border-top: #F7D14F 5px solid;
+        width: 100%;
+        font-size: 20px;
+    }
 }
