@@ -84,12 +84,3 @@ body p {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-
-
-/*Footer*/
-
-footer {
-    color: #F7D14F;
-    text-align: center;
-    border-top: #F7D14F 5px solid;
-}

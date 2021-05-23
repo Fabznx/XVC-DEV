@@ -44,6 +44,8 @@ body {
     flex: 1;
     margin: 10px;
     text-transform: uppercase;
+    position: relative;
+    z-index: 20;
 }
 
 .pricing-header {
@@ -247,20 +249,46 @@ header .current a {
 header a:hover {
     color: #fdc200;
     font-weight: bold;
+    transform: scale(1.05);
 }
 
 header button {
     color: #FFFFFF;
-    text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1px;
     background: none;
     border: none;
     pointer-events: visible;
 }
 
-header button:hover {
-    color: #fdc200;
-    font-weight: bold;
+
+/*Navigation Bar*/
+
+header nav ul li a {
+    display: inline-block;
+    font-size: 18px;
+    padding: 1px;
+    text-decoration: none;
+}
+
+header nav ul li ul {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background: #27243f;
+    border: solid 2px #fdc200;
+    border-radius: 12px;
+    float: right;
+    padding: 10px;
+    width: 260px;
+}
+
+header nav ul li:hover ul {
+    transition: .10s;
+    display: block;
+}
+
+header nav ul li ul a {
+    padding: 8px 14px;
 }
 
 
@@ -359,5 +387,20 @@ footer {
     }
     .box_right {
         flex: 100%;
+    }
+    header nav ul li ul {
+        display: none;
+        position: absolute;
+        z-index: 999;
+        background: #27243f;
+        border: solid 2px #fdc200;
+        border-radius: 12px;
+        float: right;
+        padding: 5px;
+        width: 220px;
+    }
+    header nav ul li:hover ul {
+        transition: .10s;
+        display: block;
     }
 }
