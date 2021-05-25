@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
@@ -15,7 +15,7 @@
     <meta name="keywords" content="Video-Editing, website development">
     <meta name="author" content="Fabian Hasieber">
     <!--Tab Title-->
-    <title>XVC-DEV | Welcome</title>
+    <title>XVC-DEV | About</title>
     <!--Scripts: -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/0684f9cef2.js" crossorigin="anonymous"></script>
@@ -30,14 +30,15 @@
         });
     </script>
 </head>
-<header>
+
+<body>
     <!--Navigation Bar-->
     <nav>
         <label class="logo">XVC-DEV</label>
         <ul class="tabs">
-            <li><a class="active" href="home.html">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="about.html">About</a></li>
             <li class="dropdown"><a href="#">Account <i class="fas fa-sort-down"></i></a>
                 <ul class="dropdown-content">
                     <li><a href="#">Settings</a></li>
@@ -45,26 +46,36 @@
                     <li><a href="login.html">Logout</a></li>
                 </ul>
             </li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
         <label id="icon">
                 <i class="fas fa-bars"></i>
             </label>
     </nav>
-    <!--ShowCase Area-->
-    <section id="showcase">
-        <h1>High Quality Video-Editing & Web-Development</h1>
-        <p>Adapted to your ideas</p>
-    </section>
-</header>
 
-<body>
+    <!--Main-Area-->
+    <div class="about-container">
+        <div class="profile-card">
+            <div class="card-header">
+                <div class="pic">
+                    <img src="img/icon.png">
+                </div>
+                <div class="name">Fabian Hasieber</div>
+                <div class="desc">Video-Editor & Web Designer</div>
+                <div class="socialmedia">
+                    <a href="https://www.instagram.com/fabznxyz/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/Fabznx"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/channel/UCBoOwsOcXlq4PiibnTpoFSA"><i class="fab fa-youtube"></i></a>
+                </div>
+                <a href="contact.html" class="contact-btn">Contact Me <i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
 
     <!--Bottom of the site-->
     <footer>
         <p>XVC-DEV - Copyright &copy; 2021</p>
     </footer>
-
-
 </body>
 
 </html>
