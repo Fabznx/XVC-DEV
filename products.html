@@ -2,6 +2,10 @@
 <html>
 
 <head>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="accHandler.js"></script>
+
     <meta charset="utf-8" />
 
     <!-- Sets the width based on the device-->
@@ -11,37 +15,41 @@
     <meta name="keywords" content="Video-Editing, website development">
     <meta name="author" content="Fabian Hasieber">
     <!--Tab Title-->
-    <title> XVC-DEV | Services </title>
+    <title>XVC-DEV | Products</title>
+    <!--Scripts: -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0684f9cef2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/favicon.ico">
-    <script src="https://kit.fontawesome.com/0684f9cef2.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $("#icon").click(function() {
+                $("ul").toggleClass("show");
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1><span class="highlight">XVC-DEV: </span> Video-Editing & Web Development</h1>
-            </div>
-            <!--Navigation Bar-->
-            <nav>
-                <ul>
-                    <!--List Items-->
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="userAccount.html">Account <i class="fas fa-sort-down"></i></a>
-                        <ul>
-                            <li><a href="#"><i class="fas fa-chevron-right"></i> Settings</a></li>
-                            <li><a href="#"><i class="fas fa-chevron-right"></i> Order History</a></li>
-                            <li><a href="#"><i class="fas fa-chevron-right"></i> Apperance</a></li>
-                            <li><a href="login.html">Logout <i class="fas fa-sign-out-alt"></i></a></li>
-                        </ul>
-                    </li>
+    <!--Navigation Bar-->
+    <nav>
+        <label class="logo">XVC-DEV</label>
+        <ul class="tabs">
+            <li><a class="active" href="home.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown"><a href="#">Account <i class="fas fa-sort-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="#">Logout</a></li>
                 </ul>
-            </nav>
-        </div>
-    </header>
+            </li>
+        </ul>
+        <label id="icon">
+                <i class="fas fa-bars"></i>
+            </label>
+    </nav>
 
     <!--Main-Area-->
     <section id="main">
