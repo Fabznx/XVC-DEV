@@ -380,82 +380,6 @@ footer p {
     font-size: 15px;
 }
 
-@media screen and (max-width: 1620px) {
-    .pricing-table {
-        flex: 100%;
-    }
-    .container-shop {
-        flex-wrap: nowrap;
-    }
-    .price {
-        font-size: 40px;
-        display: flex;
-        padding: 20px;
-    }
-    .pricing-header {
-        margin-bottom: 40px;
-    }
-    .title {
-        padding: 8px 0;
-        font-size: 12px;
-    }
-    #showcase {
-        height: 60vh;
-    }
-    #showcase h1 {
-        font-size: 17px;
-        color: #FFFFFF;
-        padding-left: 10px;
-        padding-top: 10px;
-        padding-right: 40px;
-    }
-    #showcase p {
-        font-size: 15px;
-        color: #FFFFFF;
-        padding-left: 10px;
-    }
-    footer {
-        margin-top: 150px;
-        height: 5vh;
-        padding: 15px;
-    }
-    nav ul li ul.dropdown-content {
-        top: 60px;
-        height: 15vh;
-        left: -4vh;
-    }
-    footer p {
-        font-size: 15px;
-    }
-}
-
-@media screen and (max-width: 1440px) and (max-height: 1080px) {
-    nav ul li ul.dropdown-content {
-        top: 80px;
-        height: 11vh;
-        left: -3vh;
-    }
-    footer {
-        margin-top: 680px;
-        height: 2vh;
-    }
-    footer p {
-        font-size: 30px;
-    }
-    #showcase h1 {
-        font-size: 45px;
-        color: #FFFFFF;
-        padding-left: 10px;
-        padding-top: 10px;
-        padding-right: 400px;
-    }
-    #showcase p {
-        font-size: 30px;
-        color: #FFFFFF;
-        padding-left: 10px;
-    }
-}
-
 @media screen and (max-width: 1440px) {
     #showcase {
         height: 30vh;
@@ -479,7 +403,7 @@ footer p {
     }
     nav ul li ul.dropdown-content {
         top: 60px;
-        height: 15vh;
+        height: 18vh;
         left: -5vh;
     }
     footer p {
@@ -663,8 +587,8 @@ footer p {
     }
     nav ul li ul.dropdown-content {
         top: 60px;
-        height: 15vh;
-        left: -5vh;
+        height: 13vh;
+        left: -2vh;
     }
     footer p {
         font-size: 15px;
