@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="AccountManager.js"></script>
+
+    <meta charset="utf-8" />
+
+    <!-- Sets the width based on the device-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Video-Editing Service and much more!">
+    <meta name="keywords" content="Video-Editing, website development">
+    <meta name="author" content="Fabian Hasieber">
+    <!--Tab Title-->
+    <title>XVC-DEV | Settings</title>
+    <!--Scripts: -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0684f9cef2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href=./css/style.css>
+    <link rel="icon" href="./img/favicon.ico">
+    <script>
+        $(document).ready(function() {
+            $("#icon").click(function() {
+                $("ul").toggleClass("show");
+
+            });
+        });
+    </script>
+</head>
+<header>
+    <!--Navigation Bar-->
+    <nav>
+        <label class="logo">XVC-DEV</label>
+        <ul class="tabs">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown"><a href="#"><i class="fas fa-user-circle"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Inbox</a></li>
+                    <li><a class="active" href="#">Settings</a></li>
+                    <li><a href="#">Placeholder</a></li>
+                    <li><a href="#" id="logLink" onClick="confirmLogInOut(), changeText()" value="Login">Login</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+        <label id="icon">
+                <i class="fas fa-bars"></i>
+            </label>
+    </nav>
+</header>
+
+<body>
+    <div class="changeLogContainer">
+        <div class="dropDownSettings">
+            <!-- Button 1 -->
+            <a href="#" onClick="changeLoginMethodShowList()">Add new Login Method</a>
+            <script>
+                function changeLoginMethodShowList() {
+                    var tMenu = document.getElementById("toggleMenu1");
+                    tMenu.classList.toggle("show");
+                }
+            </script>
+            <ul id="toggleMenu1" class="settingsTab1">
+                <li><a href="#" onClick="addGoogleLoginMethod()">Google</a></li>
+                <li><a href="#" onClick="showModalAddEmail()">Email & Password</a>
+                    <script>
+                        function showModalAddEmail() {
+                            var openAddEmail = document.getElementById("popUpAddEmail");
+                            openAddEmail.style.display = "flex";
+                        }
+                    </script>
+                    <!-- Pop-Up -->
+                    <div class="bg-modalAddEmail" id="popUpAddEmail">
+                        <div class="modal-contentAddEmail">
+                            <h2>Add Email Login</h2>
+                            <i class="fas fa-times" id="close2" onClick="hideModalAddEmail()"></i>
+                            <script>
+                                function hideModalAddEmail() {
+                                    var closeAddEmail = document.getElementById("popUpAddEmail");
+                                    closeAddEmail.style.display = "none";
+                                }
+                            </script>
+                            <div id="input2">
+                                <input type="email" name="" placeholder="Current Email" required id="email">
+                                <input type="password" name="" placeholder="Password" required id="password">
+                            </div>
+                            <button id="confirmChange" onClick="addEmailLoginMethod()">Confirm</button><br>
+                            <script>
+                                function showSubmitButton() {
+                                    var subButton = document.getElementById("confirmChange");
+                                    var inpPassword = document.getElementById("password")
+
+                                    if (password.value === "") {
+                                        subButton.style.display = "none";
+                                    } else {
+                                        subButton.style.display = "block";
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Button 2 -->
+            <a href="#" onClick="changeAppearanceShowList()">Appearance</a>
+            <script>
+                function changeAppearanceShowList() {
+                    var tMenu = document.getElementById("toggleMenu2");
+                    tMenu.classList.toggle("show");
+                }
+            </script>
+
+            <!-- DarkMode/LightMode -->
+            <ul id="toggleMenu2" class="settingsTab2">
+                <li><a href="#" onClick="lightMode()">Light Mode <i class="fas fa-toggle-on"></i></a></li>
+                <!-- <script> -->
+                <!-- function lightMode() { var element = document.body; element.classList.toggle("light-mode"); } -->
+                <!-- </script> -->
+            </ul>
+
+            <!-- Button 3 -->
+            <a href="#" onClick="manageAccountShowList()">Manage Account</a>
+            <script>
+                function manageAccountShowList() {
+                    var tMenu = document.getElementById("toggleMenu3");
+                    tMenu.classList.toggle("show");
+                }
+            </script>
+            <!-- Account Settings -->
+            <ul id="toggleMenu3" class="settingsTab3">
+                <li><a href="#">Change Name</a></li>
+                <li><a href="#" onClick="showModalEmail()">Change Email</a>
+                    <script>
+                        function showModalEmail() {
+                            var popUp = document.getElementById("popUpEmail");
+                            popUp.style.display = "flex";
+                        }
+                    </script>
+                    <!-- Pop-Up -->
+                    <div class="bg-modal-ChangeEmail" id="popUpEmail">
+                        <div class="modal-content">
+                            <h2>Change Email</h2>
+                            <i class="fas fa-times" id="close" onClick="hideModalEmail()"></i>
+                            <script>
+                                function hideModalEmail() {
+                                    var popUp = document.getElementById("popUpEmail");
+                                    popUp.style.display = "none";
+                                }
+                            </script>
+                            <div id="input">
+                                <input type="email" name="" placeholder="Current Email" required id="email">
+                                <input type="email" name="" placeholder="New Email" required id="confirm_email">
+                                <input type="password" name="" placeholder="Password" required id="password" oninput="showSubmitButton()">
+                            </div>
+                            <button id="confirmChange" onClick="updateUserEmail()">Confirm</button><br>
+                            <script>
+                                function showSubmitButton() {
+                                    var subButton = document.getElementById("confirmChange");
+                                    var inpPassword = document.getElementById("password")
+
+                                    if (password.value === "") {
+                                        subButton.style.display = "none";
+                                    } else {
+                                        subButton.style.display = "block";
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="#">Reset Password</a></li>
+                <li><a href="#" onClick="deleteUser()">Delete Account</a></li>
+            </ul>
+            <!-- Button 4 -->
+            <a href="#" onClick="placeHolderShowList()">PLACEHOLDER</a>
+            <script>
+                function placeHolderShowList() {
+                    var tMenu = document.getElementById("toggleMenu4");
+                    tMenu.classList.toggle("show");
+                }
+            </script>
+            <ul id="toggleMenu4" class="settingsTab4">
+                <li><a href="#">Placeholder</a></li>
+                <li><a href="#">Placeholder</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Bottom of the site-->
+    <footer>
+        <p>XVC-DEV - Copyright &copy; 2021</p>
+    </footer>
+
+
+</body>

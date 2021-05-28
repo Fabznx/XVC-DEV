@@ -4,7 +4,7 @@
 <head>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
-    <script src="accHandler.js"></script>
+    <script src="AccountManager.js"></script>
 
     <meta charset="utf-8" />
 
@@ -39,11 +39,12 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a class="active" href="about.html">About</a></li>
-            <li class="dropdown"><a href="#">Account <i class="fas fa-sort-down"></i></a>
+            <li class="dropdown"><a href="#"><i class="fas fa-user-circle"></i></a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="settings.html">Settings</a></li>
                     <li><a href="#">Placeholder</a></li>
-                    <li><a href="login.html">Logout</a></li>
+                    <li><a href="#" id="logLink" onClick="confirmLogInOut(), changeText()" value="Login">Login</a></li>
                 </ul>
             </li>
             <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>

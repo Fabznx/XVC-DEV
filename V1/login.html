@@ -4,7 +4,7 @@
 <head>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
-    <script src="AccountManager.js"></script>
+    <script src="accHandler.js"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,17 +23,14 @@
             <input type="email" name="" placeholder="Email" required id="email">
             <input type="password" name="" placeholder="Password" required id="password">
         </div>
-        <button id="logInOut" onCLick="loginUser()">Login</button><br>
-        <h3>or</h3>
-        <div class="google">
-            <a href="#" onClick="googleSignIn()"> <i class="fab fa-google"></i> Sign in with Google</a>
-        </div>
-        <div class="guest">
-            <a href="#" onClick="signInAsGuest()"> <i class="fas fa-user"></i> Guest</a>
-        </div>
+        <button type="submit" onclick="SignInAccount()">Login</button><br>
         <h4>If you do not have an account yet,<br>register <a href="register.html">here</a></h4>
         <h4>If you forgot your password click <a href="resetPassword.html">here</a></h4>
     </div>
+
+    <footer>
+        <p>XVC-DEV - Copyright &copy; 2021</p>
+    </footer>
 </body>
 
 </html>

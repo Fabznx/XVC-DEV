@@ -12,7 +12,7 @@
 
 body {
     background: #434950;
-    height: 28vh;
+    color: white;
 }
 
 .container-shop {
@@ -46,6 +46,7 @@ label.logo {
     color: white;
     padding: 0 100px;
     line-height: 80px;
+    padding-left: 20px;
 }
 
 nav ul {
@@ -473,6 +474,287 @@ footer p {
 .contact-btn:hover {
     background: #33d9b2;
     color: white;
+}
+
+
+/* Settings Page */
+
+.changeLogContainer {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.changeLogContainer a:hover {
+    transition: .3s;
+    transform: scale(1.1);
+    background: #33d9b2;
+    color: white;
+}
+
+.dropDownSettings {
+    display: block;
+    position: absolute;
+    top: 15vh;
+}
+
+.dropDownSettings a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid #33d9b2;
+    padding: 10px;
+    position: relative;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.settingsTab1 {
+    display: none;
+    position: absolute;
+    top: 3vh;
+    left: 4vh;
+    width: 200px;
+    z-index: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.settingsTab2 {
+    display: none;
+    position: absolute;
+    top: 3vh;
+    left: 33.5vh;
+    z-index: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.settingsTab3 {
+    display: none;
+    position: absolute;
+    top: 3vh;
+    left: 57vh;
+    z-index: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.settingsTab4 {
+    display: none;
+    position: absolute;
+    top: 3vh;
+    left: 87vh;
+    z-index: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.dropDownSettings ul#toggleMenu1.show {
+    display: block;
+}
+
+.dropDownSettings ul#toggleMenu2.show {
+    display: block;
+}
+
+.dropDownSettings ul#toggleMenu3.show {
+    display: block;
+}
+
+.dropDownSettings ul#toggleMenu4.show {
+    display: block;
+}
+
+.settingsTab1 a {
+    display: block;
+}
+
+.settingsTab2 a {
+    display: block;
+}
+
+.settingsTab3 a {
+    display: block;
+}
+
+.settingsTab4 a {
+    display: block;
+}
+
+
+/* Modal Pop-Up */
+
+.bg-modal-ChangeEmail {
+    width: 1000%;
+    height: 300%;
+    background-color: rgba(49, 55, 61, 0.9);
+    position: absolute;
+    top: -100vh;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    left: -1vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 500px;
+    height: 400px;
+    background-color: #434950;
+}
+
+.modal-content h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    top: 5vh;
+}
+
+.modal-content #close {
+    position: relative;
+    right: -28vh;
+    top: -2vh;
+    cursor: pointer;
+}
+
+.modal-content #input {
+    position: relative;
+    display: block;
+    top: 3vh;
+}
+
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
+    border: 0;
+    background: #31373d;
+    display: block;
+    text-align: center;
+    border: 2px solid #3F396B;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.25s;
+    margin: 15px auto;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.modal-content input[type="email"]:focus,
+.modal-content input[type="password"]:focus {
+    width: 220px;
+    border-color: #5848cf;
+}
+
+.modal-content button {
+    background: none;
+    display: none;
+    position: relative;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 5px;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.25s;
+    cursor: pointer;
+    top: 3vh;
+    width: 100px;
+    left: 26vh;
+}
+
+.modal-content button:hover {
+    background: #2ecc71;
+}
+
+.bg-modalAddEmail {
+    width: 1000%;
+    height: 400%;
+    background-color: rgba(49, 55, 61, 0.9);
+    position: absolute;
+    top: -80vh;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    left: -202vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2000px;
+    overflow: none;
+}
+
+.modal-contentAddEmail {
+    width: 500px;
+    height: 400px;
+    background-color: #434950;
+    border: 5px solid #7e7d81;
+    border-radius: 10px;
+}
+
+.modal-contentAddEmail h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    top: 5vh;
+}
+
+.modal-contentAddEmail #close2 {
+    position: relative;
+    right: -28vh;
+    top: -3vh;
+    cursor: pointer;
+}
+
+.modal-contentAddEmail #input2 {
+    position: relative;
+    display: block;
+    top: 3vh;
+}
+
+.modal-contentAddEmail input[type="email"],
+.modal-contentAddEmail input[type="password"] {
+    border: 0;
+    background: #31373d;
+    display: block;
+    text-align: center;
+    border: 2px solid #3F396B;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.25s;
+    margin: 15px auto;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.modal-contentAddEmail input[type="email"]:focus,
+.modal-contentAddEmail input[type="password"]:focus {
+    width: 220px;
+    border-color: #5848cf;
+}
+
+.modal-contentAddEmail button {
+    background: none;
+    display: block;
+    position: relative;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 5px;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.25s;
+    cursor: pointer;
+    top: 3vh;
+    width: 100px;
+    left: 25vh;
+}
+
+.modal-contentAddEmail button:hover {
+    background: #2ecc71;
 }
 
 @media screen and (max-width: 1440px) {

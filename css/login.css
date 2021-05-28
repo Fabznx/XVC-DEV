@@ -27,6 +27,11 @@ body {
     font-weight: 500;
 }
 
+.box h3 {
+    color: white;
+    margin-top: -20px;
+}
+
 .box a {
     color: white;
     font-weight: 1;
@@ -45,7 +50,7 @@ body {
     width: 200px;
     outline: none;
     color: white;
-    border-radius: 24px;
+    border-radius: 10px;
     transition: 0.25s;
 }
 
@@ -60,19 +65,50 @@ body {
     /*border: 0;*/
     background: none;
     display: block;
+    position: relative;
+    right: 0vh;
     margin: 20px auto;
     text-align: center;
     border: 2px solid #2ecc71;
-    padding: 14px 40px;
+    padding: 14px 93px;
     outline: none;
     color: white;
-    border-radius: 24px;
+    border-radius: 10px;
     transition: 0.25s;
     cursor: pointer;
 }
 
 .box button:hover {
     background: #2ecc71;
+}
+
+.google {
+    border: 5px solid #5848cf;
+    padding: 5px;
+    width: 205px;
+    left: 4vh;
+    background: #5848cf;
+    position: relative;
+    border-radius: 10px;
+}
+
+.google a {
+    text-decoration: none;
+}
+
+.guest {
+    border: 5px solid #7e7d81;
+    padding: 5px;
+    width: 205px;
+    margin-top: 15px;
+    left: 4vh;
+    background: #7e7d81;
+    position: relative;
+    border-radius: 10px;
+}
+
+.guest a {
+    text-decoration: none;
 }
 
 
@@ -87,29 +123,4 @@ footer {
     left: 50%;
     width: 100%;
     font-size: 20px;
-}
-
-@media screen and (max-width: 1250px) {
-    .box {
-        text-align: center;
-        width: 100%;
-        top: 50%;
-    }
-    .box h1,
-    .box h4,
-    .box a {
-        width: 100%;
-        font-size: 20px;
-    }
-    .box input[type="text"],
-    .box input[type="email"],
-    .box input[type="password"],
-    .box input[type="text"]:hover,
-    .box input[type="email"]:hover,
-    .box input[type="password"]:hover,
-    .box button,
-    .box button:hover {
-        width: 220px;
-        text-align: center;
-    }
 }

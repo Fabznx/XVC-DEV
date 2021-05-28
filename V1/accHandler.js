@@ -18,7 +18,6 @@ function isSignedIn() {
 
     if (user) {
         // User is signed in.
-        alert("User signed in: " + email.value);
         window.location = "home.html";
     } else {
         // No user is signed in.
@@ -51,7 +50,12 @@ function SignInAccount() {
 
     const promise = auth.signInWithEmailAndPassword(email.value, password.value);
     //promise.catch(e => alert(e.message));
+
+
+
     isSignedIn();
+
+
 }
 
 function signOut() {
